@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#fbfaf7">
+<meta name="apple-mobile-web-app-title" content="Riverside FC">
+<meta name="description" content="Riverside FC. Fixtures, results, squad and stats. Singapore.">
+<title>Riverside FC</title>
+<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+<link rel="icon" type="image/png" sizes="64x64" href="images/favicon-64.png">
+<link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&family=Lobster+Two:ital,wght@0,400;0,700;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <a href="#/" class="brand" aria-label="Riverside FC">
+    <img class="brand-logo" src="images/logo.png" alt="Riverside FC">
+  </a>
+
+  <nav class="site-nav" id="siteNav">
+    <a href="#/" data-nav="home">Home</a>
+    <a href="#/fixtures" data-nav="matches">Matches</a>
+    <a href="#/squad" data-nav="team">Squad</a>
+    <a href="#/fantasy" data-nav="fantasy">Fantasy</a>
+    <a href="#/media" data-nav="media">Media</a>
+    <a href="#/sponsors" data-nav="sponsors">Sponsors</a>
+    <a href="#/admin" data-nav="admin" class="nav-admin" id="navAdmin" hidden>Admin</a>
+    <button class="nav-auth" id="navAuthBtn">Sign in</button>
+  </nav>
+
+  <div class="header-right">
+    <button class="btn-auth" id="authBtn">Sign in</button>
+    <button class="nav-toggle" id="navToggle" aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<main id="app">
+  <div class="loading-screen">
+    <img class="loading-ball" src="images/ball.png" alt="">
+    <div class="loading-text">Loading</div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">
+        <img class="footer-logo" src="images/logo.png" alt="Riverside FC">
+      </div>
+      <p class="footer-blurb">Eleven a side, Singapore. Fixtures, results and whatever happened last Sunday.</p>
+    </div>
+    <div>
+      <div class="label label-red" style="margin-bottom:12px">Home Grounds</div>
+      <div class="footer-venue">
+        <strong>Riverside Park</strong>
+        <span>Access from 57-71 Park Dr</span>
+      </div>
+      <div class="footer-venue">
+        <strong>NUS Pitch 2</strong>
+        <span>2 Sports Dr, Singapore 117288</span>
+      </div>
+    </div>
+    <div>
+      <div class="label label-red" style="margin-bottom:12px">League</div>
+      <div class="footer-links">
+        <a href="https://football-league-manager-git-main-example.vercel.app/" target="_blank" rel="noopener">EFL Table &#8599;</a>
+      </div>
+    </div>
+  </div>
+
+  <div class="sponsor-strip">
+    <div class="sponsor-strip-inner">
+      <span class="label">Proudly sponsored by</span>
+      <div class="sponsor-marks" id="footerSponsors"></div>
+    </div>
+  </div>
+</footer>
+
+<div class="modal-overlay" id="modal"><div class="modal" id="modalInner"></div></div>
+<div class="toast" id="toast"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.js"></script>
+<script src="js/config.js"></script>
+<script src="js/data.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/lineup.js"></script>
+<script src="js/fantasy.js"></script>
+<script src="js/views.js"></script>
+<script src="js/admin.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
